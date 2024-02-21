@@ -11,7 +11,9 @@ const io = require("socket.io")(http, {
 const cors = require("cors");
 app.use(
   cors({
-    origin: "*",
+    origin:["https://touch-code-client.vercel.app","*"],
+    methods : ["GET" , "POST" , "PUT" ,"DELETE"],
+    allowedHeaders:["Content-Type", "Authorization"]
   })
 );
 
