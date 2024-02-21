@@ -4,9 +4,10 @@ const http = require("http").Server(app);
 const PORT = process.env.PORT || 4000;
 const io = require("socket.io")(http, {
   cors: {
-    origin: ["https://touch-code-frontend.vercel.app/#/*","*"],
+    origin: "*",
     methods: ["GET", "POST"],
   },
+   allowEIO3: true,
 });
 const cors = require("cors");
 app.use(
