@@ -4,7 +4,7 @@ const http = require("http").Server(app);
 const PORT = process.env.PORT || 4000;
 const io = require("socket.io")(http, {
   cors: {
-    origin: "*",
+    origin: ["https://touch-code-frontend.vercel.app/#/*","*"],
     methods: ["GET", "POST"],
   },
 });
